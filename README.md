@@ -58,18 +58,30 @@ Note: Uniform priors reflect initial uncertainty about parameters while respecti
 ### Posterior Distributions
 
 <p align="center">
-  <img src="![download (1)](https://github.com/user-attachments/assets/1b7f58d5-c79a-41f6-8a42-5b62ebcfc7b0)" width = "700"/>
+  <img src="https://github.com/user-attachments/assets/1b7f58d5-c79a-41f6-8a42-5b62ebcfc7b0" alt="download (1)" />
+</p>
+<p align="center">
+  <em>Figure 2: posterior distributions of the kinetic parameters estimated using Markov Chain Monte Carlo (MCMC) sampling.</em>
 </p>
 
+In general, this figure displays the posterior distributions of the kinetic parameters estimated using Markov Chain Monte Carlo (MCMC) sampling. Notably, the "n2o_affinity" plot shows the distribution of the affinity constant for nitrous oxide (N₂O) in the modeled biological system, with a mean value of approximately 0.48. Each plot illustrates the uncertainty in the estimated parameter value after incorporating the observed data, with the 94% highest density interval (HDI) providing a range for each parameter. The shape and spread of the N₂O affinity distribution, along with those of other parameters, reflect the sensitivity of the model to these parameters and the information content of the data. The HDI represents the range within which the parameter value is most likely to fall, given the model and the data and the narrower distributions indicate more precise parameter estimates, while broader distributions suggest greater uncertainty.
 
 ### Predicted vs Observed \( r_3 \)
 
-<div align="center">
-  <img src="figures/predicted_vs_observed.png" alt="Predicted vs Observed r3" width="700"/>
-</div>
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/4ba15f13-e925-49e2-843f-e4035fe27a45" alt="download (2)" />
+</p>
+<p align="center">
+  <em>Figure 3: Assessing of how well the Bayesian model informed by MCMC sampling can captures the current dynamics of the system.</em>
+</p>
+
+On figure 3, on the x-axis of "Time" indicates the progression of the reaction or process being modeled. The y-axis, labeled "Reaction Rate" quantifies the speed at which the reaction proceeds. The plot overlays two key datasets: "Observed Rates" (blue line with circular markers): These are the "experimentally" measured reaction rates at different time points. They represent the real-world data that the model aims to replicate. "Model Prediction" (orange line with square markers): This line represents the reaction rates predicted by the Bayesian model, using the kinetic parameters estimated via MCMC. 
+
+The light blue shaded area around the "Model Prediction" line represents the 90% Credible Interval (CI). This interval signifies the range within which the model predicts the true reaction rate to lie with 90% probability, given the estimated parameter distributions2. A narrow credible interval indicates higher confidence in the model's predictions. By visually comparing the "Observed Rates" with the "Model Prediction" and considering the width of the 90% CI, one can assess the goodness-of-fit of the model. If the "Observed Rates" closely follow the "Model Prediction" and fall within the 90% CI, it suggests that the model accurately captures the underlying process. Conversely, significant deviations between the observed data and the model's predictions, or a wide credible interval, may indicate model misspecification or the need for additional data.
+
+Model validation is an essential step to ensure that the model is an accurate representation of the real system. The credible interval reflects the uncertainty in the model predictions due to the uncertainty in the estimated parameters, and a good fit between the observed and predicted rates provides confidence in the model's ability to make accurate predictions.
 
 ---
 
-##  Project Structure
 
 
